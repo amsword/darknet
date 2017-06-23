@@ -1,7 +1,7 @@
-GPU=0
-CUDNN=0
-OPENCV=0
-DEBUG=0
+GPU=1
+CUDNN=1
+OPENCV=1
+DEBUG=1
 
 ARCH= -gencode arch=compute_20,code=[sm_20,sm_21] \
       -gencode arch=compute_30,code=sm_30 \
@@ -19,7 +19,7 @@ EXEC=darknet
 OBJDIR=./obj/
 
 CC=gcc
-NVCC=nvcc --compiler-options '-fPIC'
+NVCC=/usr/local/cuda/bin/nvcc --compiler-options '-fPIC'
 AR=ar
 ARFLAGS=rcs
 OPTS=-Ofast
