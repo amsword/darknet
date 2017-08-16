@@ -20,6 +20,7 @@ void show_image_cv(image p, const char *name, IplImage *disp);
 #endif
 
 float get_color(int c, int x, int max);
+void save_raw_image(image im, const char* name);
 void draw_box(image a, int x1, int y1, int x2, int y2, float r, float g, float b);
 void draw_bbox(image a, box bbox, int w, float r, float g, float b);
 void draw_label(image a, int r, int c, image label, const float *rgb);

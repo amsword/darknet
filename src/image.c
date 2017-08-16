@@ -622,6 +622,15 @@ void save_image(image im, const char *name)
 #endif
 }
 
+void save_raw_image(image im, const char* name) {
+    FILE* fp = fopen(name, "wb");
+    int total = im.h * im.w * im.c;
+    fwrite(&(im.w), sizeof(int), 1, fp);
+    fwrite(&(im.h), sizeof(int), 1, fp);
+    fwrite(im.data, sizeof(float), total, fp);
+    fclose(fp);
+}
+
 
 void show_image_layers(image p, char *name)
 {

@@ -36,8 +36,8 @@ import ycm_core
 flags = [
     '-x',
     'c',
-    '-DCUDNN',
-    '-DGPU',
+    #'-DCUDNN',
+    #'-DGPU',
     '-DOPENCV',
     '-I/usr/include/opencv',
     '-I/usr/local/cuda/include/',
